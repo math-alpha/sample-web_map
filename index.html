@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Upwork sample proof</title>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+</head>
+<body style="background: dimgrey">
+
+<div class="box">
+    <header class="row header">
+        <nav>
+            <div>
+                <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menu"></div>
+            </div>
+        </nav>
+        <nav> Logo</nav>
+        <nav> Logo2 </nav>
+    </header>
+    <div class="row my_map" id="my-map">
+
+        <input id="search_bar" type="text" placeholder="Enter location address">
+        <br>
+        <button id="btn_1" style="z-index: 1000" onclick="location.href = 'add_point.html';">Post Your Ad</button>
+    </div>
+</div>
+
+<script>
+    // Where you want to render the map.
+    let element = document.getElementById('my-map');
+
+    // Height has to be set. You can do this in CSS too.
+    element.style = 'height:100%;';
+
+    // Create Leaflet map on map element.
+    let map = L.map(element);
+
+    // Add OSM tile leayer to the Leaflet map.
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Target's GPS coordinates.
+    let target = L.latLng('47.50737', '19.04611');
+
+    // Set map's center to target with zoom 14.
+    map.setView(target, 14);
+
+    // Place a marker on the same location.
+    L.marker(target).addTo(map);
+</script>
+</body>
+</html>

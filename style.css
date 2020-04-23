@@ -1,0 +1,724 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.box .row.headr {
+    flex: 0 1 auto;
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+}
+
+.box .row.my_map {
+    flex: 0 1 auto;
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    .menu {
+        border: white 3px solid;
+        margin: 4px;
+        width: 32px;
+    }
+
+    header {
+        overflow: hidden;
+        margin: 0;
+        padding: 10px;
+        background-color: darkblue;
+        font-size: xx-large;
+    }
+
+    header nav:nth-child(1) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    header nav:nth-child(2) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    header nav:nth-child(3) {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    #search_bar {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        background: white;
+        outline: transparent;
+        border: none;
+        font-size: x-large;
+        padding: 25px;
+        width: 60%;
+        border-radius: 40px;
+        position: relative;
+        z-index: 9999;
+    }
+
+    #btn_1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background: darkblue;
+        padding: 20px;
+        position: relative;
+        outline: transparent;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-size: xx-large;
+    }
+
+    .info_input {
+        width: 95%;
+    }
+
+    .info_input {
+        border-width: 0 0 2px 0;
+        padding: 3px;
+        background-color: transparent;
+        outline: transparent;
+        font-size: x-large;
+    }
+
+    .labeler {
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+    }
+
+    #btn_2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+        background-color: darkblue;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: none;
+        margin-top: 60px;
+        width: 50%;
+    }
+
+    form {
+        margin-top: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .menu {
+        border: white 3px solid;
+        margin: 6px;
+        width: 48px;
+    }
+
+    header {
+        overflow: hidden;
+        margin: 0;
+        background-color: darkorange;
+        padding: 40px;
+        font-size: x-large;
+    }
+
+    header nav:nth-child(1) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    header nav:nth-child(2) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    header nav:nth-child(3) {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    #search_bar {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        background: white;
+        outline: transparent;
+        border: none;
+        font-size: xx-large;
+        padding: 25px;
+        width: 60%;
+        border-radius: 40px;
+    }
+
+    #btn_1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background: darkorange;
+        padding: 20px;
+        position: relative;
+        outline: transparent;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-size: x-large;
+    }
+
+    .info_input {
+        width: 95%;
+    }
+
+    .info_input {
+        border-width: 0 0 2px 0;
+        padding: 3px;
+        background-color: transparent;
+        outline: transparent;
+        font-size: x-large;
+    }
+
+    .labeler {
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+    }
+
+    #btn_2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+        background-color: darkorange;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: none;
+        margin-top: 20px;
+    }
+
+    form {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .menu {
+        border: white 8px solid;
+        margin: 8px;
+        width: 60px;
+    }
+
+    header {
+        overflow: hidden;
+        margin: 0;
+        background-color: darkred;
+        padding: 20px;
+        font-size: 400%;
+    }
+
+    header nav:nth-child(1) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    header nav:nth-child(2) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-left: 250px;
+    }
+
+    header nav:nth-child(3) {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    #search_bar {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        background: white;
+        outline: transparent;
+        border: none;
+        font-size: 350%;
+        padding: 30px;
+        width: 80%;
+        border-radius: 60px;
+        position: relative;
+        z-index: 9999;
+    }
+
+    #btn_1 {
+        display: block;
+        margin-left: 35%;
+        background: darkred;
+        padding: 20px;
+        position: absolute;
+        bottom:   40px;
+        outline: transparent;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-size: 350%;
+    }
+
+    .info_input {
+        width: 95%;
+    }
+
+    .info_input {
+        border-width: 0 0 4px 0;
+        padding: 3px;
+        background-color: transparent;
+        outline: transparent;
+        font-size: 315%;
+    }
+
+    .labeler {
+        font-size: 350%;
+        font-weight: bold;
+        font-family: "Calibri Light", sans-serif;
+    }
+
+    #btn_2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 450%;
+        font-family: "Calibri Light", sans-serif;
+        background-color: darkred;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: none;
+        margin-top: 100px;
+    }
+
+    form {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+
+
+}
+
+/*
+!*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*!
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .menu {
+        border: black 2px solid;
+        margin: 3px;
+        width: 20px;
+    }
+
+    header {
+        overflow: hidden;
+        margin: 0;
+        background-color: darkred;
+        height: 90px;
+        padding: auto;
+    }
+
+    header nav:nth-child(1) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    header nav:nth-child(2) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    header nav:nth-child(3) {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    #search_bar {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        background: white;
+        outline: transparent;
+        border: none;
+        font-size: larger;
+        padding: 25px;
+        width: 90%;
+        border-radius: 40px;
+    }
+
+    #btn_1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background: darkred;
+        padding: 20px;
+        position: relative;
+        outline: transparent;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-size: xx-large;
+    }
+
+    .info_input {
+        width: 95%;
+    }
+
+    .info_input {
+        border-width: 0 0 2px 0;
+        padding: 3px;
+        background-color: transparent;
+        outline: transparent;
+        font-size: x-large;
+    }
+
+    .labeler {
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+    }
+
+    #btn_2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+        background-color: darkred;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: none;
+        margin-top: 20px;
+    }
+
+    form {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+
+}
+*/
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .menu {
+        border: white 2px solid;
+        margin: 3px;
+        width: 20px;
+    }
+
+    header {
+        overflow: hidden;
+        margin: 0;
+        background-color: darkgreen;
+        height: 90px;
+        padding: auto;
+    }
+
+    header nav:nth-child(1) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    header nav:nth-child(2) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    header nav:nth-child(3) {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    #search_bar {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        background: white;
+        outline: transparent;
+        border: none;
+        font-size: larger;
+        padding: 15px;
+        width: 90%;
+        border-radius: 40px;
+    }
+
+    #btn_1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background: darkgreen;
+        padding: 20px;
+        position: relative;
+        outline: transparent;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-size: xx-large;
+    }
+
+    .info_input {
+        width: 95%;
+    }
+
+    .info_input {
+        border-width: 0 0 2px 0;
+        padding: 3px;
+        background-color: transparent;
+        outline: transparent;
+        font-size: x-large;
+    }
+
+    .labeler {
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+    }
+
+    #btn_2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+        background-color: darkgreen;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: none;
+        margin-top: 20px;
+    }
+
+    form {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+}
+
+/*
+  ##Device = Most of the Smartphone Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .menu {
+        border: white 9px solid;
+        margin: 3px;
+        width: 30px;
+    }
+
+    header {
+        overflow: hidden;
+        margin: 0;
+        background-color: red;
+        height: 90px;
+        padding: auto;
+    }
+
+    header nav:nth-child(1) {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    header nav:nth-child(2) {
+        /*float: left;*/
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        margin-left: 250px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    header nav:nth-child(3) {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    #search_bar {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 7px;
+        background: white;
+        outline: transparent;
+        border: none;
+        font-size: xx-large;
+        padding: 10px;
+        width: 95%;
+        border-radius: 40px;
+    }
+
+    #btn_1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background: red;
+        padding: 20px;
+        position: relative;
+        outline: transparent;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-size: xx-large;
+    }
+
+    .info_input {
+        width: 95%;
+    }
+
+    .info_input {
+        border-width: 0 0 2px 0;
+        padding: 3px;
+        background-color: transparent;
+        outline: transparent;
+        font-size: x-large;
+    }
+
+    .labeler {
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+    }
+
+    #btn_2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: xx-large;
+        font-family: "Calibri Light", sans-serif;
+        background-color: red;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: none;
+        margin-top: 50px;
+    }
+
+    form {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+
+}
